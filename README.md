@@ -69,7 +69,3 @@ BrandPeek/
 - **expo-linear-gradient** - Gradient backgrounds
 - **TypeScript** - Type safety and better developer experience
 
-
----
-
-**Built with ❤️ using React Native & Expo**
