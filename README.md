@@ -29,17 +29,17 @@ A modern React Native brand discovery app with beautiful gradients, Supabase int
 BrandPeek/
 ├── app/
 │   ├── (tabs)/              # Tab navigation screens
+│   │   ├── _layout.tsx      # Root layout with navigation setup
+│   │   ├── index.tsx        # Home screen (brand list)
+│   │   └── brand-detail.tsx # Brand detail screen
 │   ├── components/          # Reusable UI components
 │   │   ├── BrandCard.js     # Brand card component for list view
 │   │   ├── LoadingSpinner.js # Loading indicator component
 │   │   └── ErrorScreen.js   # Error handling component
 │   ├── config/              # Configuration files
 │   │   └── supabase.js      # Supabase client configuration
-│   ├── services/            # API service layer
-│   │   └── brandService.js  # Brand-related API calls
-│   ├── _layout.tsx          # Root layout with navigation setup
-│   ├── index.tsx            # Home screen (brand list)
-│   └── brand-detail.tsx     # Brand detail screen
+│   └── services/            # API service layer
+│       └── brandService.js  # Brand-related API calls
 ├── assets/                  # Static assets (images, fonts)
 ├── package.json             # Dependencies and scripts
 └── README.md               # Project documentation
@@ -48,24 +48,17 @@ BrandPeek/
 ### Why This Structure?
 
 **Separation of Concerns:**
+- `(tabs)/` - All screen files organized by Expo Router convention
 - `components/` - Reusable UI components for better code reusability
 - `services/` - API calls separated from UI logic for maintainability
 - `config/` - Configuration isolated for easy environment management
-- `screens/` - Each screen as a separate component for clarity
 
 **Benefits:**
 - **Modular**: Easy to add new features without touching existing code
 - **Testable**: Each module can be tested independently
 - **Scalable**: Structure supports growth as app complexity increases
 - **Readable**: Clear folder names make it easy for new developers to understand
-
-
-### UI/UX Principles
-- **Visual Hierarchy**: Large headers, clear sections, proper font sizing
-- **Spacing**: Generous padding and margins for breathing room
-- **Typography**: Letter spacing and line height optimized for readability
-- **Shadows**: Subtle shadows for depth and card elevation
-- **Colors**: High contrast text on gradient backgrounds for accessibility
+- **Expo Router Convention**: Following (tabs) pattern for file-based routing
 
 ## Technologies Used
 
@@ -76,5 +69,7 @@ BrandPeek/
 - **expo-linear-gradient** - Gradient backgrounds
 - **TypeScript** - Type safety and better developer experience
 
+
+---
 
 **Built with ❤️ using React Native & Expo**
